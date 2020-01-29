@@ -24,5 +24,17 @@ namespace PhysicsLab
 		{
 			InitializeComponent();
 		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			var ofd = new ATFileDialog
+			(
+				"File Dialog Title",
+				string.Format("Rio files (*.rio;)|*.rio!{0}|*.*", Application.Current.Resources["AllFiles"]),
+				true,
+				"Z:\\"
+			);
+			ofd.ShowDialog();
+		}
 	}
 }
